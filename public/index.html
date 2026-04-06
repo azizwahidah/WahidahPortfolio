@@ -724,6 +724,33 @@
       font-size: 0.78rem;
     }
 
+    /* ---- Inline Comment Strip ---- */
+    .comment-strip {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: center;
+      background: var(--warm-white);
+    }
+    .comment-strip.on-cream { background: var(--cream); }
+    .comment-strip.on-blue {
+      background: var(--blue-deep);
+      padding: 2rem;
+    }
+    .comment-strip img {
+      max-height: 80px;
+      width: auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(27, 54, 93, 0.08);
+      transform: rotate(-0.8deg);
+      transition: transform 0.3s;
+    }
+    .comment-strip.on-blue img {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .comment-strip img:hover {
+      transform: rotate(0deg) scale(1.15);
+    }
+
     /* ---- Social Proof ---- */
     .social-proof { background: var(--cream); padding: 5rem 2rem; }
     .collage {
@@ -914,6 +941,11 @@
     </div>
   </section>
 
+  <!-- Inline comment: after About -->
+  <div class="comment-strip fade-up">
+    <img src="comments/Comment %235.jpg" alt="Viewer saved $60 after watching">
+  </div>
+
   <!-- Audience -->
   <section class="audience" id="audience">
     <div class="section-inner">
@@ -989,6 +1021,11 @@
     </div>
   </section>
 
+  <!-- Inline comment: after Audience -->
+  <div class="comment-strip fade-up">
+    <img src="comments/Comment %2313.jpg" alt="Viewer reviewing their investments">
+  </div>
+
   <!-- What I Offer -->
   <section id="offers">
     <div class="section-inner">
@@ -1033,6 +1070,11 @@
       </div>
     </div>
   </section>
+
+  <!-- Inline comment: after Offers -->
+  <div class="comment-strip on-cream fade-up">
+    <img src="comments/Anna.jpg" alt="Viewer comment">
+  </div>
 
   <!-- Content Showcase -->
   <section class="content" id="content">
