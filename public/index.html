@@ -489,71 +489,90 @@
 
     /* ---- Content Showcase ---- */
     .content { background: var(--cream); }
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 2.5rem;
-      align-items: start;
-    }
     .yt-embed {
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 8px 30px rgba(27, 54, 93, 0.1);
       aspect-ratio: 16/9;
       background: var(--blue-deep);
+      max-width: 800px;
+      margin: 0 auto 1rem;
     }
     .yt-embed iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-    .content-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
+    .yt-channel-link {
+      text-align: center;
+      margin-bottom: 3rem;
     }
-    .content-link-card {
+    .yt-channel-link a {
+      color: var(--green);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .yt-channel-link a:hover { color: var(--blue-deep); }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .preview-card {
       background: white;
-      border-radius: 16px;
-      padding: 1.5rem;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(27, 54, 93, 0.06);
+      box-shadow: 0 4px 20px rgba(27, 54, 93, 0.06);
+      transition: all 0.3s;
       text-decoration: none;
       color: inherit;
-      border: 1px solid rgba(27, 54, 93, 0.06);
-      box-shadow: 0 2px 12px rgba(27, 54, 93, 0.04);
-      transition: all 0.3s;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
+      display: block;
     }
-    .content-link-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(27, 54, 93, 0.08);
-      border-color: var(--gold);
+    .preview-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(27, 54, 93, 0.1);
     }
-    .content-link-card .link-icon {
-      width: 44px;
-      height: 44px;
+    .preview-frame {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      position: relative;
       background: var(--blue-pale);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
     }
-    .content-link-card h4 {
+    .preview-frame iframe {
+      width: 200%;
+      height: 200%;
+      border: none;
+      transform: scale(0.5);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .preview-frame::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      cursor: pointer;
+    }
+    .preview-info {
+      padding: 1.25rem 1.5rem;
+    }
+    .preview-info h4 {
       font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--blue-deep);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.35rem;
     }
-    .content-link-card p {
-      font-size: 0.82rem;
+    .preview-info p {
+      font-size: 0.85rem;
       color: var(--text-light);
-      line-height: 1.5;
+      line-height: 1.6;
     }
-    .content-link-card .badge {
+    .preview-info .badge {
       display: inline-block;
       background: var(--gold-light);
       color: #8B6914;
@@ -561,7 +580,7 @@
       font-weight: 600;
       padding: 0.2rem 0.6rem;
       border-radius: 100px;
-      margin-top: 0.4rem;
+      margin-top: 0.5rem;
       letter-spacing: 0.03em;
     }
 
@@ -699,7 +718,7 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .demo-grid { grid-template-columns: 1fr; }
       .offers-grid { grid-template-columns: 1fr; }
-      .content-grid { grid-template-columns: 1fr; }
+      .preview-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .section-title { font-size: 2rem; }
       .cta-section h2 { font-size: 2rem; }
@@ -937,41 +956,38 @@
       <h2 class="section-title fade-up">Content that moves people to action.</h2>
       <p class="section-subtitle fade-up">Here's a taste of what I do and the tools I build for my community.</p>
 
-      <div class="content-grid fade-up">
-        <div class="yt-embed">
-          <iframe
-            src="https://www.youtube.com/embed/DsAr0fbhsyo"
-            title="Wealth Wahidah YouTube"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="content-links">
-          <a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener" class="content-link-card">
-            <div class="link-icon">&#x25B6;</div>
-            <div>
-              <h4>YouTube &mdash; Wealth Wahidah</h4>
-              <p>Financial education, anti-budget systems, and straight-talk money content for first-gen women.</p>
-            </div>
-          </a>
-          <a href="https://wealthwahidah.vercel.app" target="_blank" rel="noopener" class="content-link-card">
-            <div class="link-icon">&#x1f4d6;</div>
-            <div>
-              <h4>The Wealth Guide</h4>
-              <p>An interactive wealth-building guide I designed and built for my community.</p>
-              <span class="badge">BUILT WITH AI &mdash; VIBE CODED</span>
-            </div>
-          </a>
-          <a href="https://wealth-box-ai.vercel.app" target="_blank" rel="noopener" class="content-link-card">
-            <div class="link-icon">&#x1f916;</div>
-            <div>
-              <h4>Wealth Box AI</h4>
-              <p>A proof-of-concept AI chatbox I built to explore how technology can make financial education more accessible.</p>
-              <span class="badge">PROOF OF CONCEPT &mdash; VIBE CODED</span>
-            </div>
-          </a>
-        </div>
+      <div class="yt-embed fade-up">
+        <iframe
+          src="https://www.youtube.com/embed/DsAr0fbhsyo"
+          title="Wealth Wahidah — Invisible Money Method"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="yt-channel-link fade-up"><a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener">Watch more on YouTube &rarr;</a></p>
+
+      <div class="preview-grid fade-up">
+        <a href="https://wealthwahidah.vercel.app" target="_blank" rel="noopener" class="preview-card">
+          <div class="preview-frame">
+            <iframe src="https://wealthwahidah.vercel.app" title="Wealth Guide Preview" loading="lazy"></iframe>
+          </div>
+          <div class="preview-info">
+            <h4>The Wealth Guide</h4>
+            <p>An interactive wealth-building guide I designed and built for my community.</p>
+            <span class="badge">BUILT WITH AI &mdash; VIBE CODED</span>
+          </div>
+        </a>
+        <a href="https://wealth-box-ai.vercel.app" target="_blank" rel="noopener" class="preview-card">
+          <div class="preview-frame">
+            <iframe src="https://wealth-box-ai.vercel.app" title="Wealth Box AI Preview" loading="lazy"></iframe>
+          </div>
+          <div class="preview-info">
+            <h4>Wealth Box AI</h4>
+            <p>A proof-of-concept AI chatbox I built to explore how tech can make financial education more accessible.</p>
+            <span class="badge">PROOF OF CONCEPT &mdash; VIBE CODED</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
