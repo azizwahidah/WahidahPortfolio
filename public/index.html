@@ -726,51 +726,32 @@
 
     /* ---- Social Proof ---- */
     .social-proof { background: var(--cream); padding: 5rem 2rem; }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin-bottom: 1.5rem;
-    }
-    .testimonial {
-      background: white;
-      border-radius: 16px;
-      padding: 1.5rem;
-      border: 1px solid rgba(27, 54, 93, 0.06);
-      box-shadow: 0 2px 12px rgba(27, 54, 93, 0.04);
+    .collage {
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      align-items: flex-start;
     }
-    .testimonial::before {
-      content: '\201C';
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: var(--gold);
-      line-height: 1;
-      position: absolute;
-      top: 0.75rem;
-      left: 1.25rem;
-      opacity: 0.4;
+    .collage-img {
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(27, 54, 93, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      max-height: 90px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
     }
-    .testimonial p {
-      font-size: 0.88rem;
-      color: var(--text-light);
-      line-height: 1.7;
-      margin-top: 1.25rem;
-      font-style: italic;
-    }
-    .testimonial .commenter {
-      margin-top: 1rem;
-      font-size: 0.78rem;
-      color: var(--blue-mid);
-      font-weight: 600;
-      font-style: normal;
-    }
-    .testimonials-bottom-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      max-width: 740px;
-      margin: 0 auto;
+    .collage-img:nth-child(odd) { transform: rotate(-1.2deg); }
+    .collage-img:nth-child(even) { transform: rotate(1deg); }
+    .collage-img:nth-child(3n) { transform: rotate(-0.5deg); }
+    .collage-img:nth-child(4n+1) { transform: rotate(1.5deg); }
+    .collage-img:hover {
+      transform: rotate(0deg) scale(1.5);
+      box-shadow: 0 12px 40px rgba(27, 54, 93, 0.2);
+      z-index: 10;
+      position: relative;
     }
 
     /* ---- Social Links ---- */
@@ -823,8 +804,7 @@
       .offers-grid { grid-template-columns: 1fr; }
       .preview-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .testimonials-bottom-row { grid-template-columns: 1fr; }
+      .collage-img { max-height: 70px; }
       .section-title { font-size: 2rem; }
       .cta-section h2 { font-size: 2rem; }
     }
@@ -1146,29 +1126,28 @@
       <h2 class="section-title fade-up">They don't just watch. They act.</h2>
       <p class="section-subtitle fade-up">Real comments from real viewers &mdash; this is what engagement looks like.</p>
 
-      <div class="testimonials-grid fade-up">
-        <div class="testimonial">
-          <p>The fact I managed to save $60 from allowance just yesterday from seeing this bc I told myself the guitar I'm saving up for is more important than coffee from the coffee shop nearby and that I can manage to save honestly proves this for me</p>
-          <div class="commenter">@Odysseus-Saja</div>
-        </div>
-        <div class="testimonial">
-          <p>I've heard a million times that high fees are bad, low fees are good, but seeing you lay out the numbers like that really drives the point home! I'll be reviewing my investments and checking those fees!!</p>
-          <div class="commenter">@brenbrady6958</div>
-        </div>
-        <div class="testimonial">
-          <p>Really needed this, your step-by-step breakdown made it all feel way less overwhelming. Thanks for keeping it so real, relatable, and empowering. Starting with step one today</p>
-          <div class="commenter">@CalmMoneyWithTrish</div>
-        </div>
-      </div>
-      <div class="testimonials-bottom-row fade-up">
-        <div class="testimonial">
-          <p>Wow, this video really hit home. I never realized how much comparison was draining my own sense of achievement. The way you broke it down made so much sense, and it genuinely helped shift my mindset.</p>
-          <div class="commenter">@moniakter01</div>
-        </div>
-        <div class="testimonial">
-          <p>I watch all your videos. You could say I have an addiction.</p>
-          <div class="commenter">@brandonburzon5188</div>
-        </div>
+      <div class="collage fade-up">
+        <img class="collage-img" src="comments/Comment %235.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Anna.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %233.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2313.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %237.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2314.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %234.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2310.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2316.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2318.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comments%232.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %236.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2315.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %238.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2311.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2320.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment%239.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2312.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2317.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Cmment 22.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-img" src="comments/Comment %2322.jpg" alt="Viewer comment" loading="lazy">
       </div>
     </div>
   </section>
