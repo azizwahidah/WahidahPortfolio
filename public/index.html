@@ -243,7 +243,8 @@
     }
 
     /* ---- Sections shared ---- */
-    section { padding: 6rem 2rem; }
+    section { padding: 6rem 2rem; position: relative; }
+    .hero, .audience { overflow: hidden; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label {
       font-family: 'Caveat', cursive;
@@ -267,7 +268,7 @@
     }
 
     /* ---- About / Story ---- */
-    .about { background: var(--cream); }
+    .about { background: var(--cream); position: relative; overflow: hidden; }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -724,31 +725,26 @@
       font-size: 0.78rem;
     }
 
-    /* ---- Inline Comment Strip ---- */
-    .comment-strip {
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: center;
-      background: var(--warm-white);
+    /* ---- Floating Comments ---- */
+    .floating-comment {
+      position: absolute;
+      z-index: 5;
+      max-width: 340px;
+      pointer-events: auto;
     }
-    .comment-strip.on-cream { background: var(--cream); }
-    .comment-strip.on-blue {
-      background: var(--blue-deep);
-      padding: 2rem;
-    }
-    .comment-strip img {
-      max-height: 80px;
-      width: auto;
+    .floating-comment img {
+      width: 100%;
       border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(27, 54, 93, 0.08);
-      transform: rotate(-0.8deg);
-      transition: transform 0.3s;
+      box-shadow: 0 4px 20px rgba(27, 54, 93, 0.12);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0.85;
     }
-    .comment-strip.on-blue img {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-    .comment-strip img:hover {
-      transform: rotate(0deg) scale(1.15);
+    .floating-comment img:hover {
+      transform: scale(1.1) rotate(0deg) !important;
+      box-shadow: 0 8px 30px rgba(27, 54, 93, 0.2);
+      opacity: 1;
+      z-index: 20;
+      position: relative;
     }
 
     /* ---- Social Proof ---- */
@@ -832,6 +828,8 @@
       .preview-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .collage-img { max-height: 70px; }
+      .floating-comment { max-width: 220px; }
+      .floating-comment.desktop-only { display: none; }
       .section-title { font-size: 2rem; }
       .cta-section h2 { font-size: 2rem; }
     }
@@ -899,6 +897,9 @@
         </div>
       </div>
     </div>
+    <div class="floating-comment" style="bottom: 3rem; left: 2rem; transform: rotate(-2deg);">
+      <img src="comments/Anna.jpg" alt="Viewer comment" style="transform: rotate(-2deg);">
+    </div>
   </section>
 
   <!-- About -->
@@ -939,12 +940,10 @@
         </div>
       </div>
     </div>
+    <div class="floating-comment desktop-only" style="bottom: 2rem; right: 2rem; transform: rotate(1.5deg);">
+      <img src="comments/Comment %235.jpg" alt="Viewer comment" style="transform: rotate(1.5deg);">
+    </div>
   </section>
-
-  <!-- Inline comment: after About -->
-  <div class="comment-strip fade-up">
-    <img src="comments/Comment %235.jpg" alt="Viewer saved $60 after watching">
-  </div>
 
   <!-- Audience -->
   <section class="audience" id="audience">
@@ -1021,11 +1020,6 @@
     </div>
   </section>
 
-  <!-- Inline comment: after Audience -->
-  <div class="comment-strip fade-up">
-    <img src="comments/Comment %2313.jpg" alt="Viewer reviewing their investments">
-  </div>
-
   <!-- What I Offer -->
   <section id="offers">
     <div class="section-inner">
@@ -1069,12 +1063,10 @@
         </div>
       </div>
     </div>
+    <div class="floating-comment desktop-only" style="bottom: 1.5rem; left: 3rem; transform: rotate(-1deg); max-width: 300px;">
+      <img src="comments/Comment %2313.jpg" alt="Viewer comment" style="transform: rotate(-1deg);">
+    </div>
   </section>
-
-  <!-- Inline comment: after Offers -->
-  <div class="comment-strip on-cream fade-up">
-    <img src="comments/Anna.jpg" alt="Viewer comment">
-  </div>
 
   <!-- Content Showcase -->
   <section class="content" id="content">
