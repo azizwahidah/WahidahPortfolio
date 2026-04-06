@@ -766,6 +766,26 @@
       object-fit: contain;
       flex-shrink: 0;
     }
+    .collage-scroll {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 1rem;
+      scroll-snap-type: x proximity;
+    }
+    .collage-scroll-img {
+      flex-shrink: 0;
+      height: 120px;
+      width: auto;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(27, 54, 93, 0.1);
+      scroll-snap-align: start;
+      transition: transform 0.3s;
+    }
+    .collage-scroll-img:hover {
+      transform: scale(1.05);
+    }
     .collage-img:nth-child(odd) { transform: rotate(-1.2deg); }
     .collage-img:nth-child(even) { transform: rotate(1deg); }
     .collage-img:nth-child(3n) { transform: rotate(-0.5deg); }
@@ -1181,28 +1201,28 @@
       <h2 class="section-title fade-up">They don't just watch. They act.</h2>
       <p class="section-subtitle fade-up">Real comments from real viewers &mdash; this is what engagement looks like.</p>
 
-      <div class="collage fade-up">
-        <img class="collage-img" src="comments/Comment %235.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Anna.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %233.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2313.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %237.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2314.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %234.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2310.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2316.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2318.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comments%232.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %236.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2315.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %238.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2311.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2320.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment%239.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2312.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2317.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Cmment 22.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-img" src="comments/Comment %2322.jpg" alt="Viewer comment" loading="lazy">
+      <div class="collage-scroll fade-up">
+        <img class="collage-scroll-img" src="comments/Comment %235.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Anna.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %233.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2313.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %237.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2314.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %234.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2310.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2316.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2318.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comments%232.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %236.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2315.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %238.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2311.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2320.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment%239.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2312.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2317.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Cmment 22.jpg" alt="Viewer comment" loading="lazy">
+        <img class="collage-scroll-img" src="comments/Comment %2322.jpg" alt="Viewer comment" loading="lazy">
       </div>
     </div>
   </section>
