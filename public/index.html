@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wealth Wahidah — Partnership Portfolio</title>
+  <meta name="description" content="Wahidah Aziz — Licensed Investment Advisor, Financial Educator, and Creator of the Invisible Money Method. Partnership and collaboration portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #E8B931;
+      --gold-light: #FDF0C4;
+      --blue-deep: #1B365D;
+      --blue-mid: #2D5F8A;
+      --blue-soft: #4A90C4;
+      --blue-pale: #E8F1FA;
+      --cream: #FFF9EE;
+      --warm-white: #FFFDF8;
+      --text: #1a1a2e;
+      --text-light: #555568;
+      --coral: #E87461;
+      --sage: #7FB587;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--warm-white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ---- Typography ---- */
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    .script { font-family: 'Caveat', cursive; }
+
+    /* ---- Nav ---- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255, 253, 248, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(232, 185, 49, 0.15);
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(27, 54, 93, 0.08); }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--blue-deep);
+    }
+    nav .logo span { color: var(--gold); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: var(--gold); }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    .mobile-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--blue-deep);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ---- Hero ---- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(232, 185, 49, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(74, 144, 196, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text h1 {
+      font-size: 3.5rem;
+      line-height: 1.15;
+      color: var(--blue-deep);
+      margin-bottom: 0.5rem;
+    }
+    .hero-text h1 .highlight {
+      color: var(--gold);
+      position: relative;
+    }
+    .hero-text .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .hero-text .tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 1.65rem;
+      color: var(--coral);
+      margin-bottom: 2rem;
+      transform: rotate(-1deg);
+    }
+    .hero-text .credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .credential-tag {
+      background: var(--blue-pale);
+      color: var(--blue-mid);
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .credential-tag.gold {
+      background: var(--gold-light);
+      color: #8B6914;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--blue-deep);
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(232, 185, 49, 0.3);
+    }
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(232, 185, 49, 0.4);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+    .hero-image .photo-frame {
+      position: relative;
+      width: 380px;
+      height: 460px;
+    }
+    .hero-image .photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      right: 12px;
+      bottom: 12px;
+      border: 3px solid var(--gold);
+      border-radius: 20px;
+      z-index: 0;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 20px 60px rgba(27, 54, 93, 0.15);
+    }
+
+    /* ---- Sections shared ---- */
+    section { padding: 6rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Caveat', cursive;
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    .section-title {
+      font-size: 2.4rem;
+      color: var(--blue-deep);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      max-width: 650px;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    /* ---- About / Story ---- */
+    .about { background: var(--cream); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-content p {
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+    .about-content .emphasis {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--blue-deep);
+      border-left: 3px solid var(--gold);
+      padding-left: 1.25rem;
+      margin: 2rem 0;
+      line-height: 1.6;
+    }
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .highlight-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 15px rgba(27, 54, 93, 0.06);
+      border: 1px solid rgba(232, 185, 49, 0.12);
+      transition: transform 0.3s;
+    }
+    .highlight-card:hover { transform: translateY(-3px); }
+    .highlight-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .highlight-card h3 {
+      font-size: 1.05rem;
+      color: var(--blue-deep);
+      margin-bottom: 0.35rem;
+    }
+    .highlight-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ---- Audience / Stats ---- */
+    .audience { background: var(--blue-deep); color: white; position: relative; overflow: hidden; }
+    .audience::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .audience .section-label { color: var(--gold); }
+    .audience .section-title { color: white; }
+    .audience .section-subtitle { color: rgba(255,255,255,0.7); }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 1.75rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+    .stat-card:hover { transform: translateY(-4px); }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .demo-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+    .demo-card h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .demo-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+    .demo-bar .bar-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .demo-bar .bar-fill {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--gold), #F0C94E);
+      transition: width 1.5s ease;
+    }
+    .demo-bar .bar-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.8);
+      min-width: 100px;
+    }
+    .demo-bar .bar-value {
+      font-size: 0.82rem;
+      color: var(--gold);
+      font-weight: 600;
+      min-width: 42px;
+      text-align: right;
+    }
+
+    .audience-note {
+      margin-top: 2.5rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(232, 185, 49, 0.08);
+      border: 1px solid rgba(232, 185, 49, 0.15);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+    .audience-note strong { color: var(--gold); }
+
+    /* ---- What I Offer ---- */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .offer-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid rgba(27, 54, 93, 0.06);
+      box-shadow: 0 4px 20px rgba(27, 54, 93, 0.04);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--blue-soft));
+    }
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(27, 54, 93, 0.08);
+    }
+    .offer-card .card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gold-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1.25rem;
+    }
+    .offer-card h3 {
+      font-size: 1.15rem;
+      color: var(--blue-deep);
+      margin-bottom: 0.75rem;
+    }
+    .offer-card p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .offer-card ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .offer-card ul li {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .offer-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    /* ---- Content Showcase ---- */
+    .content { background: var(--cream); }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .yt-embed {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(27, 54, 93, 0.1);
+      aspect-ratio: 16/9;
+      background: var(--blue-deep);
+    }
+    .yt-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .content-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .content-link-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(27, 54, 93, 0.06);
+      box-shadow: 0 2px 12px rgba(27, 54, 93, 0.04);
+      transition: all 0.3s;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .content-link-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(27, 54, 93, 0.08);
+      border-color: var(--gold);
+    }
+    .content-link-card .link-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .content-link-card h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--blue-deep);
+      margin-bottom: 0.25rem;
+    }
+    .content-link-card p {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+    .content-link-card .badge {
+      display: inline-block;
+      background: var(--gold-light);
+      color: #8B6914;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      margin-top: 0.4rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* ---- Why Partner ---- */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .why-card {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.75rem;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid rgba(27, 54, 93, 0.05);
+      box-shadow: 0 2px 12px rgba(27, 54, 93, 0.03);
+    }
+    .why-card .why-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .why-card h3 {
+      font-size: 1.05rem;
+      color: var(--blue-deep);
+      margin-bottom: 0.4rem;
+    }
+    .why-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ---- CTA ---- */
+    .cta-section {
+      background: linear-gradient(135deg, var(--blue-deep) 0%, #243B5F 100%);
+      text-align: center;
+      padding: 5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(232, 185, 49, 0.08) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+    .cta-section .section-inner { position: relative; z-index: 1; }
+    .cta-section .tagline-big {
+      font-family: 'Caveat', cursive;
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .cta-section h2 {
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--blue-deep);
+      padding: 1rem 2.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(232, 185, 49, 0.3);
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(232, 185, 49, 0.4);
+    }
+    .cta-email {
+      margin-top: 1.5rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.88rem;
+    }
+    .cta-email a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      background: #0F1F35;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.78rem;
+    }
+
+    /* ---- Animations ---- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 968px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+      .hero-text h1 { font-size: 2.6rem; }
+      .hero-text .credentials { justify-content: center; }
+      .hero-image { order: -1; }
+      .hero-image .photo-frame { width: 280px; height: 340px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .demo-grid { grid-template-columns: 1fr; }
+      .offers-grid { grid-template-columns: 1fr; }
+      .content-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 2rem; }
+      .cta-section h2 { font-size: 2rem; }
+    }
+
+    @media (max-width: 640px) {
+      nav ul { display: none; }
+      nav ul.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--warm-white);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid rgba(232, 185, 49, 0.15);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        gap: 1rem;
+      }
+      .mobile-toggle { display: block; }
+      .hero { padding-top: 6rem; min-height: auto; }
+      .hero-text h1 { font-size: 2.1rem; }
+      .hero-text .tagline { font-size: 1.35rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .stat-number { font-size: 2rem; }
+      section { padding: 4rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="logo">Wealth <span>Wahidah</span></div>
+    <button class="mobile-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#audience">Audience</a></li>
+      <li><a href="#offers">What I Offer</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#contact">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text fade-up">
+        <p class="subtitle">Partnership & Collaboration Portfolio</p>
+        <h1>Hi, I'm <span class="highlight">Wahidah</span>.</h1>
+        <p class="tagline">Get rich. Stay ungovernable.</p>
+        <div class="credentials">
+          <span class="credential-tag gold">Series 65 Licensed</span>
+          <span class="credential-tag">Investment Advisor</span>
+          <span class="credential-tag">Financial Educator</span>
+          <span class="credential-tag">Content Creator</span>
+        </div>
+        <a href="#contact" class="hero-cta">Let's Partner Up &rarr;</a>
+      </div>
+      <div class="hero-image fade-up">
+        <div class="photo-frame">
+          <img src="headshot.jpeg" alt="Wahidah Aziz — Wealth Wahidah" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-content fade-up">
+          <p class="section-label">My Story</p>
+          <h2 class="section-title">I saved $100K on a $45K salary. Then I started teaching other women how.</h2>
+          <p>I'm a first-gen daughter of immigrants who grew up with money advice built around survival and guilt. Nobody taught me how money actually works &mdash; so I figured it out myself and built a system around it.</p>
+          <p>That system became the <strong>Invisible Money Method</strong> &mdash; a Two-Step Anti-Budget approach that prioritizes emergency funds, automation, and simplicity over traditional budgeting.</p>
+          <div class="emphasis">
+            I help women stop tracking every dollar and start building real wealth &mdash; with systems that work even when life doesn't.
+          </div>
+          <p>Now, through Wealth Wahidah, I create content that challenges outdated money rules and replaces them with strategies that actually fit the lives of first-gen women, millennials, and anyone who was never handed a financial playbook.</p>
+        </div>
+        <div class="about-highlights fade-up">
+          <div class="highlight-card">
+            <div class="icon">&#x1f4b0;</div>
+            <h3>$100K Saved on $45K</h3>
+            <p>Proof that the system works &mdash; even on a modest nonprofit salary.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">&#x1f393;</div>
+            <h3>Series 65 Licensed</h3>
+            <p>Licensed investment advisor bringing real credentials to financial education.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">&#x2728;</div>
+            <h3>The Invisible Money Method</h3>
+            <p>A proprietary Two-Step Anti-Budget system that automates wealth-building.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">&#x1f4a1;</div>
+            <h3>First-Gen Perspective</h3>
+            <p>Content rooted in lived experience &mdash; not textbook theory.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience -->
+  <section class="audience" id="audience">
+    <div class="section-inner">
+      <p class="section-label fade-up">The Audience</p>
+      <h2 class="section-title fade-up">A highly engaged community that takes action.</h2>
+      <p class="section-subtitle fade-up">My viewers don't just watch &mdash; they open accounts, automate their paychecks, and implement systems while the video is still playing.</p>
+
+      <div class="stats-grid fade-up">
+        <div class="stat-card">
+          <div class="stat-number">182K+</div>
+          <div class="stat-label">Total Views</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">35%</div>
+          <div class="stat-label">Avg. Watch Time</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">877</div>
+          <div class="stat-label">Subscribers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">207</div>
+          <div class="stat-label">Views per Subscriber</div>
+        </div>
+      </div>
+
+      <div class="demo-grid fade-up">
+        <div class="demo-card">
+          <h4>Age Breakdown</h4>
+          <div class="demo-bar">
+            <span class="bar-label">25&ndash;34 years</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 73.8%"></div></div>
+            <span class="bar-value">36.9%</span>
+          </div>
+          <div class="demo-bar">
+            <span class="bar-label">35&ndash;44 years</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 47.4%"></div></div>
+            <span class="bar-value">23.7%</span>
+          </div>
+          <div class="demo-bar">
+            <span class="bar-label">Combined 25&ndash;44</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
+            <span class="bar-value">60.6%</span>
+          </div>
+        </div>
+        <div class="demo-card">
+          <h4>Gender</h4>
+          <div class="demo-bar">
+            <span class="bar-label">Women</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 82%"></div></div>
+            <span class="bar-value">41%</span>
+          </div>
+          <div class="demo-bar" style="margin-top: 1rem;">
+            <span class="bar-label" style="font-size: 0.78rem; color: rgba(255,255,255,0.5);">Growing female audience in a historically male-dominated space</span>
+          </div>
+        </div>
+        <div class="demo-card">
+          <h4>Geography</h4>
+          <div class="demo-bar">
+            <span class="bar-label">United States</span>
+            <div class="bar-track"><div class="bar-fill" style="width: 74%"></div></div>
+            <span class="bar-value">37%</span>
+          </div>
+          <div class="demo-bar" style="margin-top: 1rem;">
+            <span class="bar-label" style="font-size: 0.78rem; color: rgba(255,255,255,0.5);">U.S.-based audience with global reach</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="audience-note fade-up">
+        <strong>Why these numbers matter:</strong> With a views-to-subscriber ratio of 207:1, my content reaches far beyond my subscriber base &mdash; meaning every video gets discovered by new people actively searching for financial guidance. My audience is in the prime wealth-building demographic (25&ndash;44), and they don't just consume content. They act on it.
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Offer -->
+  <section id="offers">
+    <div class="section-inner">
+      <p class="section-label fade-up">What I Offer</p>
+      <h2 class="section-title fade-up">Partnerships that feel natural, not forced.</h2>
+      <p class="section-subtitle fade-up">I keep partnerships tight and intentional. If I recommend something, I actually believe in it. That's why the trust is real.</p>
+
+      <div class="offers-grid fade-up">
+        <div class="offer-card">
+          <div class="card-icon">&#x1f3ac;</div>
+          <h3>Sponsored Content</h3>
+          <p>Authentic integrations woven into my signature educational format.</p>
+          <ul>
+            <li>Dedicated YouTube videos</li>
+            <li>Integrated product mentions</li>
+            <li>Short-form content (Reels, Shorts)</li>
+            <li>Multi-video series</li>
+          </ul>
+        </div>
+        <div class="offer-card">
+          <div class="card-icon">&#x1f4da;</div>
+          <h3>Financial Education Consulting</h3>
+          <p>Help your company build financial literacy programs that actually resonate.</p>
+          <ul>
+            <li>Content strategy for underserved audiences</li>
+            <li>Financial literacy curriculum design</li>
+            <li>Workshop facilitation</li>
+            <li>Program advising</li>
+          </ul>
+        </div>
+        <div class="offer-card">
+          <div class="card-icon">&#x1f91d;</div>
+          <h3>Brand Partnerships</h3>
+          <p>Long-term collaborations with brands that align with my mission.</p>
+          <ul>
+            <li>Ambassador programs</li>
+            <li>Co-created content</li>
+            <li>Product feedback & development</li>
+            <li>Event appearances & panels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Showcase -->
+  <section class="content" id="content">
+    <div class="section-inner">
+      <p class="section-label fade-up">See the Work</p>
+      <h2 class="section-title fade-up">Content that moves people to action.</h2>
+      <p class="section-subtitle fade-up">Here's a taste of what I do and the tools I build for my community.</p>
+
+      <div class="content-grid fade-up">
+        <div class="yt-embed">
+          <iframe
+            src="https://www.youtube.com/embed?listType=user_uploads&list=UCjws1YLOPuylIyDxgOJc0iw"
+            title="Wealth Wahidah YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="content-links">
+          <a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener" class="content-link-card">
+            <div class="link-icon">&#x25B6;</div>
+            <div>
+              <h4>YouTube &mdash; Wealth Wahidah</h4>
+              <p>Financial education, anti-budget systems, and straight-talk money content for first-gen women.</p>
+            </div>
+          </a>
+          <a href="https://wealthwahidah.vercel.app" target="_blank" rel="noopener" class="content-link-card">
+            <div class="link-icon">&#x1f4d6;</div>
+            <div>
+              <h4>The Wealth Guide</h4>
+              <p>An interactive wealth-building guide I designed and built for my community.</p>
+              <span class="badge">BUILT WITH AI &mdash; VIBE CODED</span>
+            </div>
+          </a>
+          <a href="https://wealth-box-ai.vercel.app" target="_blank" rel="noopener" class="content-link-card">
+            <div class="link-icon">&#x1f916;</div>
+            <div>
+              <h4>Wealth Box AI</h4>
+              <p>An AI-powered financial chatbox I built to make money advice more accessible.</p>
+              <span class="badge">BUILT WITH AI &mdash; VIBE CODED</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Partner -->
+  <section id="why">
+    <div class="section-inner">
+      <p class="section-label fade-up">Why Wealth Wahidah</p>
+      <h2 class="section-title fade-up">What makes this different.</h2>
+
+      <div class="why-grid fade-up">
+        <div class="why-card">
+          <div class="why-num">01</div>
+          <div>
+            <h3>Action-Taking Audience</h3>
+            <p>Viewers open accounts, automate savings, and take action while the video is still playing. This isn't passive consumption &mdash; it's conversion.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">02</div>
+          <div>
+            <h3>Trust Over Hype</h3>
+            <p>I only recommend what I actually use and believe in. No crypto schemes, no get-rich-quick noise. That's why partnerships here convert.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">03</div>
+          <div>
+            <h3>Underserved Market</h3>
+            <p>First-gen daughters and women of color building wealth &mdash; a growing demographic that most financial brands haven't figured out how to reach authentically.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">04</div>
+          <div>
+            <h3>Licensed Credibility</h3>
+            <p>Series 65 licensed investment advisor. This isn't just content &mdash; it's expert-level financial education with real credentials behind it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="section-inner">
+      <p class="tagline-big">Get rich. Stay ungovernable.</p>
+      <h2>Let's build something together.</h2>
+      <p>I'm currently open to brand partnerships, sponsorships, and consulting opportunities with companies that value financial education.</p>
+      <a href="mailto:wealthwahidah@gmail.com?subject=Partnership%20Inquiry%20%E2%80%94%20Wealth%20Wahidah" class="cta-button">
+        Start the Conversation &rarr;
+      </a>
+      <p class="cta-email">or email me directly at <a href="mailto:wealthwahidah@gmail.com">wealthwahidah@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Wealth Wahidah. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('nav ul').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
