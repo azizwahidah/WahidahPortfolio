@@ -496,25 +496,39 @@
       aspect-ratio: 16/9;
       background: var(--blue-deep);
       max-width: 800px;
-      margin: 0 auto 1rem;
+      margin: 0 auto 0;
+      border-radius: 16px 16px 0 0;
     }
     .yt-embed iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-    .yt-channel-link {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .yt-channel-link a {
-      color: var(--green);
-      font-weight: 600;
-      font-size: 0.9rem;
+    .yt-info-link {
+      display: block;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      background: white;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 0 16px 16px;
       text-decoration: none;
-      transition: color 0.3s;
+      color: inherit;
+      box-shadow: 0 8px 30px rgba(27, 54, 93, 0.1);
+      transition: background 0.3s;
     }
-    .yt-channel-link a:hover { color: var(--blue-deep); }
+    .yt-info-link:hover { background: var(--blue-pale); }
+    .yt-info-link h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--blue-deep);
+      margin-bottom: 0.25rem;
+    }
+    .yt-info-link p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
 
     .preview-grid {
       display: grid;
@@ -965,7 +979,10 @@
           allowfullscreen>
         </iframe>
       </div>
-      <p class="yt-channel-link fade-up"><a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener">Watch more on YouTube &rarr;</a></p>
+      <a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener" class="yt-info-link fade-up">
+        <h4>YouTube &mdash; Wealth Wahidah</h4>
+        <p>Financial education, anti-budget systems, and straight-talk money content for first-gen women.</p>
+      </a>
 
       <div class="preview-grid fade-up">
         <a href="https://wealthwahidah.vercel.app" target="_blank" rel="noopener" class="preview-card">
