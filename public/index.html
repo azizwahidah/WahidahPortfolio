@@ -10,18 +10,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gold: #E8B931;
-      --gold-light: #FDF0C4;
-      --blue-deep: #1B365D;
-      --blue-mid: #2D5F8A;
-      --blue-soft: #4A90C4;
-      --blue-pale: #E8F1FA;
+      --gold: #D4A843;
+      --gold-light: #FBF0D4;
+      --blue-deep: #2B5E4F;
+      --blue-mid: #3A7D6E;
+      --blue-soft: #4E9A87;
+      --blue-pale: #E4F0EC;
       --cream: #FFF9EE;
       --warm-white: #FFFDF8;
       --text: #1a1a2e;
       --text-light: #555568;
-      --coral: #E87461;
+      --coral: #C96B3C;
       --sage: #7FB587;
+      --orange: #C96B3C;
+      --orange-light: #F5E0D2;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -47,7 +49,7 @@
       z-index: 100;
       background: rgba(255, 253, 248, 0.92);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(232, 185, 49, 0.15);
+      border-bottom: 1px solid rgba(212, 168, 67, 0.15);
       padding: 0.9rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -105,7 +107,7 @@
       right: -10%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(232, 185, 49, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 70%);
       border-radius: 50%;
     }
     .hero::after {
@@ -170,6 +172,10 @@
       background: var(--gold-light);
       color: #8B6914;
     }
+    .credential-tag.orange {
+      background: var(--orange-light);
+      color: var(--orange);
+    }
     .hero-cta {
       display: inline-flex;
       align-items: center;
@@ -182,11 +188,11 @@
       font-weight: 600;
       font-size: 0.95rem;
       transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(232, 185, 49, 0.3);
+      box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
     }
     .hero-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(232, 185, 49, 0.4);
+      box-shadow: 0 6px 25px rgba(212, 168, 67, 0.4);
     }
 
     .hero-image {
@@ -277,7 +283,7 @@
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 2px 15px rgba(27, 54, 93, 0.06);
-      border: 1px solid rgba(232, 185, 49, 0.12);
+      border: 1px solid rgba(212, 168, 67, 0.12);
       transition: transform 0.3s;
     }
     .highlight-card:hover { transform: translateY(-3px); }
@@ -379,7 +385,7 @@
     .demo-bar .bar-fill {
       height: 100%;
       border-radius: 10px;
-      background: linear-gradient(90deg, var(--gold), #F0C94E);
+      background: linear-gradient(90deg, var(--orange), var(--gold));
       transition: width 1.5s ease;
     }
     .demo-bar .bar-label {
@@ -398,8 +404,8 @@
     .audience-note {
       margin-top: 2.5rem;
       padding: 1.25rem 1.5rem;
-      background: rgba(232, 185, 49, 0.08);
-      border: 1px solid rgba(232, 185, 49, 0.15);
+      background: rgba(212, 168, 67, 0.08);
+      border: 1px solid rgba(212, 168, 67, 0.15);
       border-radius: 12px;
       font-size: 0.9rem;
       color: rgba(255,255,255,0.8);
@@ -430,7 +436,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--gold), var(--blue-soft));
+      background: linear-gradient(90deg, var(--orange), var(--gold), var(--blue-soft));
     }
     .offer-card:hover {
       transform: translateY(-4px);
@@ -593,7 +599,7 @@
 
     /* ---- CTA ---- */
     .cta-section {
-      background: linear-gradient(135deg, var(--blue-deep) 0%, #243B5F 100%);
+      background: linear-gradient(135deg, var(--blue-deep) 0%, #1E4A3D 100%);
       text-align: center;
       padding: 5rem 2rem;
       position: relative;
@@ -607,7 +613,7 @@
       transform: translateX(-50%);
       width: 800px;
       height: 800px;
-      background: radial-gradient(circle, rgba(232, 185, 49, 0.08) 0%, transparent 60%);
+      background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 60%);
       border-radius: 50%;
     }
     .cta-section .section-inner { position: relative; z-index: 1; }
@@ -642,11 +648,11 @@
       font-weight: 700;
       font-size: 1rem;
       transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(232, 185, 49, 0.3);
+      box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
     }
     .cta-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(232, 185, 49, 0.4);
+      box-shadow: 0 8px 30px rgba(212, 168, 67, 0.4);
     }
     .cta-email {
       margin-top: 1.5rem;
@@ -660,7 +666,7 @@
 
     /* ---- Footer ---- */
     footer {
-      background: #0F1F35;
+      background: #1A3D32;
       padding: 2rem;
       text-align: center;
     }
@@ -708,7 +714,7 @@
         right: 0;
         background: var(--warm-white);
         padding: 1.5rem 2rem;
-        border-bottom: 1px solid rgba(232, 185, 49, 0.15);
+        border-bottom: 1px solid rgba(212, 168, 67, 0.15);
         box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         gap: 1rem;
       }
@@ -747,8 +753,8 @@
         <h1>Hi, I'm <span class="highlight">Wahidah</span>.</h1>
         <p class="tagline">Get rich. Stay ungovernable.</p>
         <div class="credentials">
-          <span class="credential-tag gold">Series 65 Licensed</span>
-          <span class="credential-tag">Investment Advisor</span>
+          <span class="credential-tag gold">CFP Candidate</span>
+          <span class="credential-tag orange">Licensed Investment Advisor</span>
           <span class="credential-tag">Financial Educator</span>
           <span class="credential-tag">Content Creator</span>
         </div>
@@ -784,8 +790,8 @@
           </div>
           <div class="highlight-card">
             <div class="icon">&#x1f393;</div>
-            <h3>Series 65 Licensed</h3>
-            <p>Licensed investment advisor bringing real credentials to financial education.</p>
+            <h3>CFP Candidate &amp; Licensed Advisor</h3>
+            <p>Passed the CFP exam and licensed investment advisor &mdash; real credentials behind the content.</p>
           </div>
           <div class="highlight-card">
             <div class="icon">&#x2728;</div>
@@ -1000,7 +1006,7 @@
           <div class="why-num">04</div>
           <div>
             <h3>Licensed Credibility</h3>
-            <p>Series 65 licensed investment advisor. This isn't just content &mdash; it's expert-level financial education with real credentials behind it.</p>
+            <p>CFP exam passed. Licensed investment advisor. This isn't just content &mdash; it's expert-level financial education with real credentials behind it.</p>
           </div>
         </div>
       </div>
