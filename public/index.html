@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wealth Wahidah — Partnership Portfolio</title>
   <meta name="description" content="Wahidah Aziz — Licensed Investment Advisor, Financial Educator, and Creator of the Invisible Money Method. Partnership and collaboration portfolio.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Wealth Wahidah — Partnership Portfolio">
+  <meta property="og:description" content="Wahidah Aziz is a CFP Candidate, Licensed Investment Advisor, and creator of the Invisible Money Method. Open for brand partnerships, sponsorships, and consulting.">
+  <meta property="og:image" content="headshot.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wealth Wahidah — Partnership Portfolio">
+  <meta name="twitter:description" content="CFP Candidate. Licensed Investment Advisor. Creator of the Invisible Money Method. Let's partner up.">
+  <meta name="twitter:image" content="headshot.jpeg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>W</text></svg>">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
@@ -710,6 +724,81 @@
       font-size: 0.78rem;
     }
 
+    /* ---- Social Proof ---- */
+    .social-proof { background: var(--cream); padding: 5rem 2rem; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .testimonial {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(27, 54, 93, 0.06);
+      box-shadow: 0 2px 12px rgba(27, 54, 93, 0.04);
+      position: relative;
+    }
+    .testimonial::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--gold);
+      line-height: 1;
+      position: absolute;
+      top: 0.75rem;
+      left: 1.25rem;
+      opacity: 0.4;
+    }
+    .testimonial p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-top: 1.25rem;
+      font-style: italic;
+    }
+    .testimonial .commenter {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--blue-mid);
+      font-weight: 600;
+      font-style: normal;
+    }
+    .testimonials-bottom-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    /* ---- Social Links ---- */
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.8);
+      transition: all 0.3s;
+    }
+    .social-link:hover {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-color: var(--gold);
+    }
+
     /* ---- Animations ---- */
     .fade-up {
       opacity: 0;
@@ -734,6 +823,8 @@
       .offers-grid { grid-template-columns: 1fr; }
       .preview-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonials-bottom-row { grid-template-columns: 1fr; }
       .section-title { font-size: 2rem; }
       .cta-section h2 { font-size: 2rem; }
     }
@@ -1048,6 +1139,40 @@
     </div>
   </section>
 
+  <!-- Social Proof -->
+  <section class="social-proof">
+    <div class="section-inner">
+      <p class="section-label fade-up">What Viewers Say</p>
+      <h2 class="section-title fade-up">They don't just watch. They act.</h2>
+      <p class="section-subtitle fade-up">Real comments from real viewers &mdash; this is what engagement looks like.</p>
+
+      <div class="testimonials-grid fade-up">
+        <div class="testimonial">
+          <p>The fact I managed to save $60 from allowance just yesterday from seeing this bc I told myself the guitar I'm saving up for is more important than coffee from the coffee shop nearby and that I can manage to save honestly proves this for me</p>
+          <div class="commenter">@Odysseus-Saja</div>
+        </div>
+        <div class="testimonial">
+          <p>I've heard a million times that high fees are bad, low fees are good, but seeing you lay out the numbers like that really drives the point home! I'll be reviewing my investments and checking those fees!!</p>
+          <div class="commenter">@brenbrady6958</div>
+        </div>
+        <div class="testimonial">
+          <p>Really needed this, your step-by-step breakdown made it all feel way less overwhelming. Thanks for keeping it so real, relatable, and empowering. Starting with step one today</p>
+          <div class="commenter">@CalmMoneyWithTrish</div>
+        </div>
+      </div>
+      <div class="testimonials-bottom-row fade-up">
+        <div class="testimonial">
+          <p>Wow, this video really hit home. I never realized how much comparison was draining my own sense of achievement. The way you broke it down made so much sense, and it genuinely helped shift my mindset.</p>
+          <div class="commenter">@moniakter01</div>
+        </div>
+        <div class="testimonial">
+          <p>I watch all your videos. You could say I have an addiction.</p>
+          <div class="commenter">@brandonburzon5188</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-section" id="contact">
     <div class="section-inner">
@@ -1058,6 +1183,10 @@
         Start the Conversation &rarr;
       </a>
       <p class="cta-email">or email me directly at <a href="mailto:wealthwahidah@gmail.com">wealthwahidah@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener" class="social-link">YouTube</a>
+        <a href="https://www.linkedin.com/in/wahidah-aziz-4459ba60" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+      </div>
     </div>
   </section>
 
@@ -1089,6 +1218,48 @@
         document.querySelector('nav ul').classList.remove('open');
       });
     });
+
+    // Animated stat counters
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.counted) {
+          entry.target.dataset.counted = 'true';
+          const target = entry.target.textContent.trim();
+          const hasPlus = target.includes('+');
+          const hasPercent = target.includes('%');
+          const hasColon = target.includes(':');
+          const numStr = target.replace(/[^0-9.]/g, '');
+          const end = parseFloat(numStr);
+          const isDecimal = numStr.includes('.');
+          const duration = 1500;
+          const start = performance.now();
+
+          if (hasColon) return; // skip ratio format
+
+          const animate = (now) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = eased * end;
+            let display;
+            if (target.includes('K')) {
+              display = Math.round(current) + 'K';
+            } else if (isDecimal) {
+              display = current.toFixed(1);
+            } else {
+              display = Math.round(current);
+            }
+            if (hasPercent) display += '%';
+            if (hasPlus) display += '+';
+            entry.target.textContent = display;
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-number').forEach(el => countObserver.observe(el));
   </script>
 
 </body>
