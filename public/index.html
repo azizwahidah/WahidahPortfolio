@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wealth Wahidah — Partnership Portfolio</title>
-  <meta name="description" content="Wahidah Aziz — Licensed Investment Advisor, Financial Educator, and Creator of the Invisible Money Method. Partnership and collaboration portfolio.">
+  <title>Wahidah Aziz — Financial Education Content Lead</title>
+  <meta name="description" content="Wahidah Aziz — Financial educator, content strategist, and CFP candidate who turns complex money topics into clear, engaging content. Available for content lead and financial education roles.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Wealth Wahidah — Partnership Portfolio">
-  <meta property="og:description" content="Wahidah Aziz passed the CFP exam, is a Licensed Investment Advisor, and creator of the Invisible Money Method. Open for brand partnerships, sponsorships, and consulting.">
+  <meta property="og:title" content="Wahidah Aziz — Financial Education Content Lead">
+  <meta property="og:description" content="CFP candidate. Series 65 licensed. 80+ videos. I make financial education content that people actually trust — and act on.">
   <meta property="og:image" content="headshot.jpeg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Wealth Wahidah — Partnership Portfolio">
-  <meta name="twitter:description" content="Passed the CFP Exam. Licensed Investment Advisor. Creator of the Invisible Money Method. Let's partner up.">
+  <meta name="twitter:title" content="Wahidah Aziz — Financial Education Content Lead">
+  <meta name="twitter:description" content="CFP candidate. Series 65 licensed. 80+ videos. Financial education content that people trust and act on.">
   <meta name="twitter:image" content="headshot.jpeg">
 
   <!-- Favicon -->
@@ -43,7 +43,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -54,7 +53,6 @@
       overflow-x: hidden;
     }
 
-    /* ---- Typography ---- */
     h1, h2, h3 { font-family: 'Playfair Display', serif; }
     .script { font-family: 'Caveat', cursive; }
 
@@ -119,20 +117,16 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -30%;
-      right: -10%;
-      width: 600px;
-      height: 600px;
+      top: -30%; right: -10%;
+      width: 600px; height: 600px;
       background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 70%);
       border-radius: 50%;
     }
     .hero::after {
       content: '';
       position: absolute;
-      bottom: -20%;
-      left: -5%;
-      width: 400px;
-      height: 400px;
+      bottom: -20%; left: -5%;
+      width: 400px; height: 400px;
       background: radial-gradient(circle, rgba(74, 144, 196, 0.06) 0%, transparent 70%);
       border-radius: 50%;
     }
@@ -147,26 +141,27 @@
       z-index: 1;
     }
     .hero-text h1 {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       line-height: 1.15;
       color: var(--blue-deep);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
     .hero-text h1 .highlight {
       color: var(--gold);
       position: relative;
     }
     .hero-text .subtitle {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-light);
-      margin-bottom: 0.5rem;
-      font-weight: 500;
+      margin-bottom: 1.5rem;
+      max-width: 480px;
+      line-height: 1.8;
     }
     .hero-text .tagline {
       font-family: 'Caveat', cursive;
-      font-size: 1.65rem;
+      font-size: 1.5rem;
       color: var(--coral);
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       transform: rotate(-1deg);
     }
     .hero-text .credentials {
@@ -188,9 +183,9 @@
       background: var(--gold-light);
       color: #8B6914;
     }
-    .credential-tag.orange {
-      background: var(--orange-light);
-      color: var(--orange);
+    .credential-tag.green {
+      background: #E8F5E9;
+      color: var(--green);
     }
     .hero-cta {
       display: inline-flex;
@@ -211,10 +206,7 @@
       box-shadow: 0 6px 25px rgba(43, 94, 79, 0.4);
     }
 
-    .hero-image {
-      display: flex;
-      justify-content: center;
-    }
+    .hero-image { display: flex; justify-content: center; }
     .hero-image .photo-frame {
       position: relative;
       width: 380px;
@@ -223,10 +215,7 @@
     .hero-image .photo-frame::before {
       content: '';
       position: absolute;
-      top: -12px;
-      left: -12px;
-      right: 12px;
-      bottom: 12px;
+      top: -12px; left: -12px; right: 12px; bottom: 12px;
       border: 3px solid var(--gold);
       border-radius: 20px;
       z-index: 0;
@@ -244,7 +233,6 @@
 
     /* ---- Sections shared ---- */
     section { padding: 6rem 2rem; position: relative; scroll-margin-top: 60px; }
-    .hero { overflow: hidden; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label {
       font-family: 'Caveat', cursive;
@@ -267,20 +255,17 @@
       line-height: 1.8;
     }
 
-    /* ---- About / Story ---- */
-    .about { background: var(--cream); position: relative; }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
+    /* ---- The Pitch / Why Me ---- */
+    .pitch { background: var(--cream); }
+    .pitch-narrative {
+      max-width: 720px;
     }
-    .about-content p {
+    .pitch-narrative p {
       color: var(--text-light);
       margin-bottom: 1.25rem;
       font-size: 1rem;
     }
-    .about-content .emphasis {
+    .pitch-narrative .emphasis {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       font-style: italic;
@@ -290,152 +275,38 @@
       margin: 2rem 0;
       line-height: 1.6;
     }
-    .about-highlights {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
+
+    .differentiators {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
     }
-    .highlight-card {
+    .diff-card {
       background: white;
       border-radius: 16px;
-      padding: 1.5rem;
+      padding: 1.75rem;
       box-shadow: 0 2px 15px rgba(27, 54, 93, 0.06);
       border: 1px solid rgba(212, 168, 67, 0.12);
       transition: transform 0.3s;
     }
-    .highlight-card:hover { transform: translateY(-3px); }
-    .highlight-card .icon {
+    .diff-card:hover { transform: translateY(-3px); }
+    .diff-card .icon {
       font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
-    .highlight-card h3 {
+    .diff-card h3 {
       font-size: 1.05rem;
       color: var(--blue-deep);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
     }
-    .highlight-card p {
+    .diff-card p {
       font-size: 0.88rem;
       color: var(--text-light);
       line-height: 1.6;
     }
 
-    /* ---- Audience / Stats ---- */
-    .audience { background: var(--blue-deep); color: white; position: relative; overflow: hidden; }
-    .audience::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .audience .section-label { color: var(--gold); }
-    .audience .section-title { color: white; }
-    .audience .section-subtitle { color: rgba(255,255,255,0.7); }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      z-index: 1;
-    }
-    .stat-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 1.75rem;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s;
-    }
-    .stat-card:hover { transform: translateY(-4px); }
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-    .stat-label {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.7);
-      font-weight: 500;
-      letter-spacing: 0.03em;
-    }
-
-    .demo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .demo-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 1.75rem;
-    }
-    .demo-card h4 {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-    .demo-bar {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.6rem;
-    }
-    .demo-bar .bar-track {
-      flex: 1;
-      height: 6px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .demo-bar .bar-fill {
-      height: 100%;
-      border-radius: 10px;
-      background: linear-gradient(90deg, var(--orange), var(--gold));
-      transition: width 1.5s ease;
-    }
-    .demo-bar .bar-label {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.8);
-      min-width: 100px;
-    }
-    .demo-bar .bar-value {
-      font-size: 0.82rem;
-      color: var(--gold);
-      font-weight: 600;
-      min-width: 42px;
-      text-align: right;
-    }
-
-    .audience-note {
-      margin-top: 2.5rem;
-      padding: 1.25rem 1.5rem;
-      background: rgba(212, 168, 67, 0.08);
-      border: 1px solid rgba(212, 168, 67, 0.15);
-      border-radius: 12px;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.8);
-      line-height: 1.7;
-      position: relative;
-      z-index: 1;
-    }
-    .audience-note strong { color: var(--gold); }
-
-    /* ---- What I Offer ---- */
+    /* ---- What I Do ---- */
     .offers-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -505,16 +376,172 @@
       border-radius: 50%;
     }
 
+    /* ---- How I Work ---- */
+    .process { background: var(--blue-deep); color: white; overflow: hidden; position: relative; }
+    .process::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .process .section-label { color: var(--gold); }
+    .process .section-title { color: white; }
+    .process .section-subtitle { color: rgba(255,255,255,0.7); }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+    .process-step::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      right: -0.5rem;
+      width: calc(100% - 56px);
+      height: 2px;
+      background: rgba(212, 168, 67, 0.3);
+      transform: translateX(100%);
+    }
+    .process-step:last-child::after { display: none; }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      background: rgba(212, 168, 67, 0.15);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin: 0 auto 1rem;
+    }
+    .process-step h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.4rem;
+    }
+    .process-step p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    /* ---- Experience ---- */
+    .experience { background: var(--cream); }
+    .timeline {
+      position: relative;
+      max-width: 800px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), var(--blue-soft));
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 56px;
+      margin-bottom: 2.5rem;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      position: absolute;
+      left: 12px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 50%;
+      border: 3px solid var(--cream);
+      z-index: 1;
+    }
+    .timeline-item.current .timeline-dot {
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(43, 94, 79, 0.2);
+    }
+    .timeline-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+    .timeline-item.current .timeline-date { color: var(--green); }
+    .timeline-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--blue-deep);
+      margin-bottom: 0.15rem;
+    }
+    .timeline-company {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-details {
+      list-style: none;
+    }
+    .timeline-details li {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      padding: 0.2rem 0;
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    .timeline-details li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+    .timeline-tag {
+      display: inline-block;
+      background: var(--blue-pale);
+      color: var(--blue-mid);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      margin-top: 0.5rem;
+      margin-right: 0.35rem;
+      letter-spacing: 0.02em;
+    }
+    .timeline-tag.gold {
+      background: var(--gold-light);
+      color: #8B6914;
+    }
+
     /* ---- Content Showcase ---- */
-    .content { background: var(--cream); }
+    .content { background: var(--warm-white); }
     .yt-embed {
-      border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 8px 30px rgba(27, 54, 93, 0.1);
       aspect-ratio: 16/9;
       background: var(--blue-deep);
       max-width: 800px;
-      margin: 0 auto 0;
+      margin: 0 auto;
       border-radius: 16px 16px 0 0;
     }
     .yt-embed iframe {
@@ -589,9 +616,7 @@
       top: 0; left: 0; right: 0; bottom: 0;
       cursor: pointer;
     }
-    .preview-info {
-      padding: 1.25rem 1.5rem;
-    }
+    .preview-info { padding: 1.25rem 1.5rem; }
     .preview-info h4 {
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
@@ -616,38 +641,35 @@
       letter-spacing: 0.03em;
     }
 
-    /* ---- Why Partner ---- */
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    .why-card {
+    /* ---- Social Proof ---- */
+    .social-proof { background: var(--cream); padding: 5rem 2rem; }
+    .social-proof .section-inner { max-width: 1400px; }
+    .proof-collage {
       display: flex;
-      gap: 1.25rem;
-      padding: 1.75rem;
-      background: white;
-      border-radius: 16px;
-      border: 1px solid rgba(27, 54, 93, 0.05);
-      box-shadow: 0 2px 12px rgba(27, 54, 93, 0.03);
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: flex-start;
     }
-    .why-card .why-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--gold);
-      font-weight: 700;
-      line-height: 1;
-      flex-shrink: 0;
+    .proof-img {
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(27, 54, 93, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: auto;
     }
-    .why-card h3 {
-      font-size: 1.05rem;
-      color: var(--blue-deep);
-      margin-bottom: 0.4rem;
+    .proof-img.large {
+      width: min(100%, 1300px);
     }
-    .why-card p {
-      font-size: 0.88rem;
-      color: var(--text-light);
-      line-height: 1.6;
+    .proof-img.small {
+      width: min(45%, 560px);
+    }
+    .proof-img:nth-child(odd) { transform: rotate(-1deg); }
+    .proof-img:nth-child(even) { transform: rotate(0.8deg); }
+    .proof-img:hover {
+      transform: rotate(0deg) scale(1.05);
+      box-shadow: 0 8px 30px rgba(27, 54, 93, 0.2);
+      z-index: 10;
+      position: relative;
     }
 
     /* ---- CTA ---- */
@@ -661,11 +683,9 @@
     .cta-section::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: 50%;
+      top: -50%; left: 50%;
       transform: translateX(-50%);
-      width: 800px;
-      height: 800px;
+      width: 800px; height: 800px;
       background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 60%);
       border-radius: 50%;
     }
@@ -717,99 +737,6 @@
       text-decoration: none;
     }
 
-    /* ---- Footer ---- */
-    footer {
-      background: #0F1F35;
-      padding: 2rem;
-      text-align: center;
-    }
-    footer p {
-      color: rgba(255,255,255,0.35);
-      font-size: 0.78rem;
-    }
-
-    /* ---- Floating Comments ---- */
-    .floating-comment {
-      position: absolute;
-      z-index: 5;
-      max-width: 550px;
-      pointer-events: auto;
-    }
-    .floating-comment img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(27, 54, 93, 0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
-      opacity: 0.9;
-    }
-    .floating-comment img:hover {
-      transform: scale(1.15) rotate(0deg) !important;
-      box-shadow: 0 12px 40px rgba(27, 54, 93, 0.25);
-      opacity: 1;
-      z-index: 20;
-      position: relative;
-    }
-
-    /* ---- Social Proof ---- */
-    .social-proof { background: var(--cream); padding: 5rem 2rem; }
-    .collage {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      align-items: flex-start;
-    }
-    .collage-img {
-      border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(27, 54, 93, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      max-height: 80px;
-      width: auto;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-    .collage-scroll-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 0.5rem;
-    }
-    .collage-scroll {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      align-items: flex-start;
-      min-width: fit-content;
-    }
-    .collage-scroll-img {
-      flex-shrink: 0;
-      max-height: 90px;
-      width: auto;
-      border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(27, 54, 93, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .collage-scroll-img:nth-child(odd) { transform: rotate(-1.2deg); }
-    .collage-scroll-img:nth-child(even) { transform: rotate(1deg); }
-    .collage-scroll-img:nth-child(3n) { transform: rotate(-0.5deg); }
-    .collage-scroll-img:hover {
-      transform: rotate(0deg) scale(1.3);
-      box-shadow: 0 8px 30px rgba(27, 54, 93, 0.2);
-      z-index: 10;
-      position: relative;
-    }
-    .collage-img:nth-child(odd) { transform: rotate(-1.2deg); }
-    .collage-img:nth-child(even) { transform: rotate(1deg); }
-    .collage-img:nth-child(3n) { transform: rotate(-0.5deg); }
-    .collage-img:nth-child(4n+1) { transform: rotate(1.5deg); }
-    .collage-img:hover {
-      transform: rotate(0deg) scale(1.5);
-      box-shadow: 0 12px 40px rgba(27, 54, 93, 0.2);
-      z-index: 10;
-      position: relative;
-    }
-
     /* ---- Social Links ---- */
     .social-links {
       display: flex;
@@ -836,6 +763,17 @@
       border-color: var(--gold);
     }
 
+    /* ---- Footer ---- */
+    footer {
+      background: #0F1F35;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.78rem;
+    }
+
     /* ---- Animations ---- */
     .fade-up {
       opacity: 0;
@@ -851,18 +789,17 @@
     @media (max-width: 968px) {
       .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
       .hero-text h1 { font-size: 2.6rem; }
+      .hero-text .subtitle { margin-left: auto; margin-right: auto; }
       .hero-text .credentials { justify-content: center; }
       .hero-image { order: -1; }
       .hero-image .photo-frame { width: 280px; height: 340px; }
-      .about-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .demo-grid { grid-template-columns: 1fr; }
+      .differentiators { grid-template-columns: 1fr; }
       .offers-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .process-step::after { display: none; }
       .preview-grid { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .floating-comment { max-width: 280px; }
-      .collage-scroll { min-width: 900px; }
-      .collage-scroll-img { max-height: 75px; }
+      .proof-img.large { width: min(100%, 1000px); }
+      .proof-img.small { width: min(48%, 480px); }
       .section-title { font-size: 2rem; }
       .cta-section h2 { font-size: 2rem; }
     }
@@ -874,8 +811,7 @@
         flex-direction: column;
         position: absolute;
         top: 100%;
-        left: 0;
-        right: 0;
+        left: 0; right: 0;
         background: var(--warm-white);
         padding: 1.5rem 2rem;
         border-bottom: 1px solid rgba(212, 168, 67, 0.15);
@@ -885,13 +821,13 @@
       .mobile-toggle { display: block; }
       .hero { padding-top: 5rem; padding-bottom: 2rem; min-height: auto; }
       .hero-text h1 { font-size: 1.8rem; }
-      .hero-text .tagline { font-size: 1.2rem; margin-bottom: 1rem; }
+      .hero-text .tagline { font-size: 1.2rem; }
       .hero-text .subtitle { font-size: 0.9rem; }
       .hero-image .photo-frame { width: 200px; height: 240px; }
       .hero-text .credentials { gap: 0.5rem; margin-bottom: 1.25rem; }
       .credential-tag { font-size: 0.7rem; padding: 0.3rem 0.75rem; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-      .stat-number { font-size: 2rem; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .proof-grid { grid-template-columns: 1fr 1fr; }
       section { padding: 4rem 1.25rem; }
     }
   </style>
@@ -900,17 +836,16 @@
 
   <!-- Nav -->
   <nav id="navbar">
-    <div class="logo">Wealth <span>Wahidah</span></div>
+    <div class="logo">Wahidah <span>Aziz</span></div>
     <button class="mobile-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
     <ul>
-      <li><a href="#problem">The Problem</a></li>
-      <li><a href="#audience">The Audience</a></li>
-      <li><a href="#viewers">Proof</a></li>
-      <li><a href="#offers">Partnership</a></li>
-      <li><a href="#content">Content</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#why">Why Me</a></li>
+      <li><a href="#services">What I Do</a></li>
+      <li><a href="#process">How I Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">My Work</a></li>
       <li><a href="#contact">Let's Talk</a></li>
     </ul>
   </nav>
@@ -919,226 +854,225 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-text fade-up">
-        <p class="subtitle">Wealth Wahidah &mdash; Partnership Portfolio</p>
-        <h1>Your next customers are <span class="highlight">already watching</span>.</h1>
-        <p class="tagline">Real expertise. Real audience. Real results.</p>
-        <div style="display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.25rem; flex-wrap: wrap;">
-          <p style="color: var(--text-light); font-size: 0.95rem; max-width: 480px; margin: 0;">I reach first-gen women and millennials building wealth &mdash; an audience most financial brands can't access authentically. They trust me. They'll trust you through me.</p>
-          <img src="comments/Anna.jpg" alt="Viewer comment" style="max-width: 280px; border-radius: 10px; box-shadow: 0 3px 15px rgba(27,54,93,0.1); transform: rotate(-1deg);">
-        </div>
+        <p class="tagline">Credentials + Content + Camera</p>
+        <h1>I make financial education <span class="highlight">people actually trust.</span></h1>
+        <p class="subtitle">I turn complex financial topics into content people actually understand. And I have the credentials and compliance experience to back up every word.</p>
         <div class="credentials">
-          <span class="credential-tag">For Fintech</span>
-          <span class="credential-tag">For Financial Education</span>
-          <span class="credential-tag">For Brands Serving Women</span>
+          <span class="credential-tag gold">CFP Candidate</span>
+          <span class="credential-tag">Series 65 Licensed</span>
+          <span class="credential-tag green">80+ Videos Produced</span>
         </div>
-        <a href="#contact" class="hero-cta">Let's Partner Up &rarr;</a>
+        <a href="#contact" class="hero-cta">Let's Work Together &rarr;</a>
       </div>
       <div class="hero-image fade-up">
         <div class="photo-frame">
-          <img src="headshot.jpeg" alt="Wahidah Aziz — Wealth Wahidah" loading="eager">
+          <img src="headshot.jpeg" alt="Wahidah Aziz" loading="eager">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The Problem -->
-  <section class="about" id="problem">
+  <!-- Why Me -->
+  <section class="pitch" id="why">
     <div class="section-inner">
-      <div class="about-grid">
-        <div class="about-content fade-up">
-          <p class="section-label">The Problem</p>
-          <h2 class="section-title">You're spending money to reach an audience that doesn't trust you yet.</h2>
-          <p>First-gen women, millennials, and women of color are the fastest-growing wealth-building demographic in the U.S. &mdash; and most financial brands have no idea how to talk to them.</p>
-          <p>Traditional ads feel corporate. Influencer partnerships feel forced. And generic financial content doesn't land with people who grew up without a financial playbook.</p>
-          <div class="emphasis">
-            This audience doesn't respond to polished marketing. They respond to someone who lived it &mdash; someone they already trust.
-          </div>
-          <p>That's where I come in. I'm Wahidah Aziz &mdash; a licensed investment advisor who passed the CFP exam and the creator of Wealth Wahidah. I already have the relationship with this audience. A partnership with me means your brand enters the conversation through trust, not interruption.</p>
-        </div>
-        <div class="about-highlights fade-up">
-          <div class="highlight-card">
-            <div class="icon">&#x1f937;</div>
-            <h3>I've Been in Their Shoes</h3>
-            <p>I know what it's like to worry about money with no one to ask. That lived experience is why my audience trusts what I recommend &mdash; I only share what I'd actually use.</p>
-          </div>
-          <div class="highlight-card">
-            <div class="icon">&#x2728;</div>
-            <h3>Trust Is the Unlock</h3>
-            <p>When I recommend a product, my audience acts. They open accounts, automate savings, and follow through &mdash; while the video is still playing.</p>
-          </div>
-          <div class="highlight-card">
-            <div class="icon">&#x1f393;</div>
-            <h3>Credentials Matter</h3>
-            <p>Passed the CFP exam and licensed advisor. Your brand gets paired with real expertise, not just followers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="floating-comment" style="bottom: 0.5rem; right: 1rem; transform: rotate(1.5deg); max-width: 750px;">
-      <img src="comments/Comment %235.jpg" alt="Viewer comment" style="transform: rotate(1.5deg);">
-    </div>
-  </section>
-
-  <!-- Audience -->
-  <section class="audience" id="audience">
-    <div class="section-inner">
-      <p class="section-label fade-up">The Audience You'll Reach</p>
-      <h2 class="section-title fade-up">They're not just watching. They're opening accounts, automating paychecks, and buying &mdash; while the video is still playing.</h2>
-      <p class="section-subtitle fade-up">This is the audience your brand needs but can't access through traditional channels. Here's who they are.</p>
-
-      <div class="stats-grid fade-up">
-        <div class="stat-card">
-          <div class="stat-number">182K+</div>
-          <div class="stat-label">Total Views</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">55%</div>
-          <div class="stat-label">30-Sec Retention</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Organic Reach</div>
+      <div class="pitch-narrative fade-up">
+        <p class="section-label">Why Me</p>
+        <h2 class="section-title">Most content creators know social. Most financial planners know finance. I do both.</h2>
+        <p>I spent two years as an associate financial planner managing $1M+ client portfolios at Brio Financial Group. I passed the CFP exam. I hold a Series 65 license. I've written compliance-reviewed content for a fintech platform. And I've built a financial education brand from scratch: 80+ videos, a signature framework, and a growing audience of first-generation wealth builders who actually take action on what I teach.</p>
+        <p>That combination is rare. You won't have to teach me finance <em>or</em> content. I already speak both languages, and I know how to translate between them for an audience that's been underserved by traditional financial media.</p>
+        <div class="emphasis">
+          I don't just explain financial concepts clearly. I've sat across from clients, built their financial plans, and helped them implement recommendations. That experience shows up in every piece of content I create.
         </div>
       </div>
 
-      <div class="demo-grid fade-up">
-        <div class="demo-card">
-          <h4>Age Breakdown</h4>
-          <div class="demo-bar">
-            <span class="bar-label">25&ndash;34 years</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 73.8%"></div></div>
-            <span class="bar-value">36.9%</span>
-          </div>
-          <div class="demo-bar">
-            <span class="bar-label">35&ndash;44 years</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 47.4%"></div></div>
-            <span class="bar-value">23.7%</span>
-          </div>
-          <div class="demo-bar">
-            <span class="bar-label">Combined 25&ndash;44</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div>
-            <span class="bar-value">60.6%</span>
-          </div>
+      <div class="differentiators fade-up">
+        <div class="diff-card">
+          <div class="icon">&#x1f4ca;</div>
+          <h3>Real Financial Credentials</h3>
+          <p>CFP candidate, Series 65 licensed, NYU Financial Planning certification. I've built comprehensive financial plans covering cash flow, retirement projections, and investment allocation. Your content gets backed by someone who actually knows the material.</p>
         </div>
-        <div class="demo-card">
-          <h4>Gender</h4>
-          <div class="demo-bar">
-            <span class="bar-label">Women</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 82%"></div></div>
-            <span class="bar-value">41%</span>
-          </div>
-          <div class="demo-bar" style="margin-top: 1rem;">
-            <span class="bar-label" style="font-size: 0.78rem; color: rgba(255,255,255,0.5);">Growing female audience in a historically male-dominated space</span>
-          </div>
+        <div class="diff-card">
+          <div class="icon">&#x2705;</div>
+          <h3>Compliance-Ready</h3>
+          <p>I've written content for a fintech platform (Kikoff) and ensured all client communications met regulatory standards at Brio. I understand the guardrails, so your compliance team won't dread working with me.</p>
         </div>
-        <div class="demo-card">
-          <h4>Geography</h4>
-          <div class="demo-bar">
-            <span class="bar-label">United States</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 74%"></div></div>
-            <span class="bar-value">37%</span>
-          </div>
-          <div class="demo-bar" style="margin-top: 1rem;">
-            <span class="bar-label" style="font-size: 0.78rem; color: rgba(255,255,255,0.5);">U.S.-based audience with global reach</span>
-          </div>
+        <div class="diff-card">
+          <div class="icon">&#x1f3a5;</div>
+          <h3>On-Camera &amp; End-to-End</h3>
+          <p>I ideate, research, script, produce, and perform. 80+ videos created from scratch. 40% engagement growth through retention analytics and audience-informed iteration. I own the full process.</p>
         </div>
-      </div>
-
-      <div class="audience-note fade-up">
-        <strong>What this means for your brand:</strong> My content reaches new people daily &mdash; viewers actively searching for financial guidance discover me organically, not through ads. 60% are in the prime spending demographic (25&ndash;44). They don't just watch &mdash; they stay. 55% are still engaged at the 30-second mark.
       </div>
     </div>
   </section>
 
-  <!-- Social Proof -->
-  <section class="social-proof" id="viewers">
+  <!-- What I Do -->
+  <section id="services">
     <div class="section-inner">
-      <p class="section-label fade-up">Don't Take My Word For It</p>
-      <h2 class="section-title fade-up">This is what your brand gets access to.</h2>
-      <p class="section-subtitle fade-up">Real comments from real viewers &mdash; people who take action while the video is still playing.</p>
-
-      <div class="collage-scroll-wrap fade-up">
-      <div class="collage-scroll">
-        <img class="collage-scroll-img" src="comments/Comment %235.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Anna.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %233.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2313.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %237.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2314.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %234.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2310.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2316.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2318.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comments%232.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %236.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2315.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %238.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2311.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2320.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment%239.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2312.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2317.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Cmment 22.jpg" alt="Viewer comment" loading="lazy">
-        <img class="collage-scroll-img" src="comments/Comment %2322.jpg" alt="Viewer comment" loading="lazy">
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What I Offer -->
-  <section id="offers">
-    <div class="section-inner">
-      <p class="section-label fade-up">How We Work Together</p>
-      <h2 class="section-title fade-up">Your product becomes part of the system &mdash; not an interruption of it.</h2>
-      <p class="section-subtitle fade-up">I integrate brands into my educational content so naturally that viewers act on it before the video ends. Here's what that looks like for you.</p>
+      <p class="section-label fade-up">What I Bring to Your Team</p>
+      <h2 class="section-title fade-up">Financial education content that's credible, relatable, and built to perform.</h2>
+      <p class="section-subtitle fade-up">Whether you need a content lead, an on-camera educator, or a strategist who understands your audience, I can step in and deliver from day one.</p>
 
       <div class="offers-grid fade-up">
         <div class="offer-card">
           <div class="card-icon">&#x1f3ac;</div>
-          <h3>Content That Converts</h3>
-          <p>Your product gets woven into educational content viewers are already acting on &mdash; not skipping past.</p>
+          <h3>Social &amp; Video Content</h3>
+          <p>End-to-end production of educational content across platforms, from concept to final cut.</p>
           <ul>
-            <li>Dedicated YouTube videos</li>
-            <li>Integrated product mentions</li>
-            <li>Short-form content (Reels, Shorts)</li>
-            <li>Multi-video series</li>
+            <li>Short-form video (Reels, Shorts, TikTok)</li>
+            <li>Long-form YouTube</li>
+            <li>Carousels &amp; social copy</li>
+            <li>Script writing &amp; on-camera delivery</li>
+          </ul>
+        </div>
+        <div class="offer-card">
+          <div class="card-icon">&#x1f4a1;</div>
+          <h3>Content Strategy</h3>
+          <p>Data-informed content planning built around audience needs and platform best practices.</p>
+          <ul>
+            <li>Editorial calendars &amp; content roadmaps</li>
+            <li>Audience research &amp; retention analysis</li>
+            <li>Platform-native adaptation</li>
+            <li>Performance iteration</li>
           </ul>
         </div>
         <div class="offer-card">
           <div class="card-icon">&#x1f4da;</div>
-          <h3>Reach an Underserved Market</h3>
-          <p>I help your company build financial literacy programs that actually resonate with the audiences you're missing.</p>
+          <h3>Financial Education Programs</h3>
+          <p>Consulting on financial literacy initiatives that reach underserved audiences authentically.</p>
           <ul>
-            <li>Content strategy for first-gen and WOC audiences</li>
-            <li>Financial literacy curriculum design</li>
+            <li>Curriculum &amp; program design</li>
+            <li>Women &amp; first-gen audience strategy</li>
             <li>Workshop facilitation</li>
-            <li>Program advising</li>
-          </ul>
-        </div>
-        <div class="offer-card">
-          <div class="card-icon">&#x1f91d;</div>
-          <h3>Built-In Trust</h3>
-          <p>Skip the trust-building phase. My audience already listens, follows through, and takes action on what I recommend.</p>
-          <ul>
-            <li>Ambassador programs</li>
-            <li>Co-created content</li>
-            <li>Product feedback &amp; development</li>
-            <li>Event appearances &amp; panels</li>
+            <li>Educational resource development</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="floating-comment" style="bottom: 1.5rem; left: 1rem; transform: rotate(-1deg); max-width: 750px;">
-      <img src="comments/Comment %2313.jpg" alt="Viewer comment" style="transform: rotate(-1deg);">
+  </section>
+
+  <!-- How I Work -->
+  <section class="process" id="process">
+    <div class="section-inner">
+      <p class="section-label fade-up">How I Work</p>
+      <h2 class="section-title fade-up">End-to-end ownership. Every piece, every time.</h2>
+      <p class="section-subtitle fade-up">I don't hand off steps. I own the full content lifecycle, the same way I do for my own brand every week.</p>
+
+      <div class="process-grid fade-up">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>Research</h4>
+          <p>Dig into the topic. Build subject-matter fluency. Identify what the audience actually needs to understand.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>Ideate</h4>
+          <p>Find the angle. What's the hook? What makes this click for someone who didn't grow up talking about money?</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>Script &amp; Produce</h4>
+          <p>Write, shoot, edit. On camera or off. Adapted for the platform it's going to live on.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h4>Publish</h4>
+          <p>Platform-native formatting, copy, thumbnails, and scheduling. Ready to go.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <h4>Iterate</h4>
+          <p>Review performance data. What landed? What didn't? Adjust and improve for next time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <div class="section-inner">
+      <p class="section-label fade-up">Where I've Done This</p>
+      <h2 class="section-title fade-up">Finance, content, and fintech. Not one or the other.</h2>
+
+      <div class="timeline fade-up">
+        <div class="timeline-item current">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Mar 2020 – Present</div>
+          <div class="timeline-role">Founder &amp; Content Lead</div>
+          <div class="timeline-company">Wealth Wahidah</div>
+          <ul class="timeline-details">
+            <li>Built a financial education brand from zero: identity, visual system, and signature content framework (the Invisible Money Method)</li>
+            <li>Produced and scripted 80+ educational videos turning investing and cash flow topics into jargon-free narratives</li>
+            <li>Grew engagement 40% through retention analytics, thumbnail testing, and audience-informed iteration</li>
+            <li>Developed multi-channel content across YouTube, Instagram, TikTok, and email</li>
+          </ul>
+          <span class="timeline-tag gold">Content Creation</span>
+          <span class="timeline-tag">Video Production</span>
+          <span class="timeline-tag">Audience Growth</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Apr 2025 – Feb 2026</div>
+          <div class="timeline-role">Contract Copywriter</div>
+          <div class="timeline-company">Kikoff</div>
+          <ul class="timeline-details">
+            <li>Wrote conversion-focused copy and educational content for a credit-building fintech platform</li>
+            <li>Translated complex credit concepts into approachable, compliant messaging for product launches</li>
+            <li>Partnered with product and marketing teams to optimize content for engagement and sign-ups</li>
+          </ul>
+          <span class="timeline-tag gold">Fintech</span>
+          <span class="timeline-tag">Compliance</span>
+          <span class="timeline-tag">Conversion Copy</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May 2023 – May 2025</div>
+          <div class="timeline-role">Associate Financial Planner</div>
+          <div class="timeline-company">Brio Financial Group</div>
+          <ul class="timeline-details">
+            <li>Managed 80+ client relationships ($1M+ AUM) with 90%+ satisfaction through clear communication</li>
+            <li>Built comprehensive financial plans covering cash flow, retirement, investment allocation, and insurance</li>
+            <li>Ensured all communications met compliance and regulatory standards for investment advice</li>
+            <li>Translated complex financial recommendations into clear next steps clients actually followed</li>
+          </ul>
+          <span class="timeline-tag gold">Financial Planning</span>
+          <span class="timeline-tag">Client-Facing</span>
+          <span class="timeline-tag">Compliance</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jul 2022 – May 2023</div>
+          <div class="timeline-role">Client Service Associate</div>
+          <div class="timeline-company">Litman Gregory Wealth Management</div>
+          <ul class="timeline-details">
+            <li>Supported onboarding and servicing for 20+ high-net-worth households ($3M+ AUM)</li>
+            <li>Created process documentation that improved team efficiency by 25%</li>
+          </ul>
+          <span class="timeline-tag gold">Wealth Management</span>
+          <span class="timeline-tag">HNW Clients</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 2.5rem;" class="fade-up">
+        <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem; font-weight: 600;">Education &amp; Licenses</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="credential-tag gold">CFP Exam – Passed</span>
+          <span class="credential-tag">FINRA Series 65 Licensed</span>
+          <span class="credential-tag">NYU – Financial Planning</span>
+          <span class="credential-tag">Indiana University – B.S. &amp; B.A.</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Content Showcase -->
-  <section class="content" id="content">
+  <section class="content" id="work">
     <div class="section-inner">
-      <p class="section-label fade-up">See What You're Getting</p>
-      <h2 class="section-title fade-up">This is the content your brand would live inside.</h2>
-      <p class="section-subtitle fade-up">Watch how I teach, see the tools I build, and imagine your product woven into this.</p>
+      <p class="section-label fade-up">See the Work</p>
+      <h2 class="section-title fade-up">This is what I produce. Every week, end to end.</h2>
+      <p class="section-subtitle fade-up">Educational videos, interactive tools, and a content brand I built from scratch. Imagine this level of quality and ownership applied to your platform.</p>
 
       <div class="yt-embed fade-up">
         <iframe
@@ -1150,7 +1084,7 @@
         </iframe>
       </div>
       <a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener" class="yt-info-link fade-up">
-        <h4>YouTube &mdash; Wealth Wahidah</h4>
+        <h4>YouTube – Wealth Wahidah</h4>
         <p>Financial education, anti-budget systems, and straight-talk money content for first-gen women.</p>
       </a>
 
@@ -1162,7 +1096,7 @@
           <div class="preview-info">
             <h4>The Wealth Guide</h4>
             <p>An interactive wealth-building guide I designed and built for my community.</p>
-            <span class="badge">BUILT WITH AI &mdash; VIBE CODED</span>
+            <span class="badge">BUILT WITH AI</span>
           </div>
         </a>
         <a href="https://wealth-box-ai.vercel.app" target="_blank" rel="noopener" class="preview-card">
@@ -1172,79 +1106,52 @@
           <div class="preview-info">
             <h4>Wealth Box AI</h4>
             <p>A proof-of-concept AI chatbox I built to explore how tech can make financial education more accessible.</p>
-            <span class="badge">PROOF OF CONCEPT &mdash; VIBE CODED</span>
+            <span class="badge">PROOF OF CONCEPT</span>
           </div>
         </a>
       </div>
     </div>
-    <div class="floating-comment" style="bottom: 2rem; right: 2rem; transform: rotate(1deg); max-width: 700px;">
-      <img src="comments/Comment %2315.jpg" alt="Viewer comment" style="transform: rotate(1deg);">
-    </div>
   </section>
 
-  <!-- About Me -->
-  <section id="about">
+  <!-- Social Proof -->
+  <section class="social-proof" id="proof">
     <div class="section-inner">
-      <p class="section-label fade-up">Who You're Partnering With</p>
-      <h2 class="section-title fade-up">I saved $100K on a $45K salary. Then I started teaching other women how.</h2>
-      <p class="section-subtitle fade-up">I'm Wahidah Aziz &mdash; a first-gen daughter of immigrants who passed the CFP exam, licensed investment advisor, and creator of the Invisible Money Method.</p>
+      <p class="section-label fade-up">The Audience Response</p>
+      <h2 class="section-title fade-up">People don't just watch. They act.</h2>
+      <p class="section-subtitle fade-up">Real comments from real viewers. The kind of engagement and trust that's hard to manufacture.</p>
 
-      <div class="why-grid fade-up">
-        <div class="why-card">
-          <div class="why-num">&#x1f4b0;</div>
-          <div>
-            <h3>$100K Saved on $45K</h3>
-            <p>I didn't learn this from a textbook. I built my wealth system on a nonprofit salary &mdash; and that's why my audience trusts me to teach it.</p>
-          </div>
-        </div>
-        <div class="why-card">
-          <div class="why-num">&#x1f393;</div>
-          <div>
-            <h3>Passed the CFP Exam &amp; Licensed Advisor</h3>
-            <p>Passed the CFP exam. Series 65 licensed. Your brand gets paired with real financial credentials &mdash; not just content.</p>
-          </div>
-        </div>
-        <div class="why-card">
-          <div class="why-num">&#x2728;</div>
-          <div>
-            <h3>The Invisible Money Method</h3>
-            <p>A proprietary Two-Step Anti-Budget system that automates wealth-building. It's the framework behind every video &mdash; and why viewers take action.</p>
-          </div>
-        </div>
-        <div class="why-card">
-          <div class="why-num">&#x1f4a1;</div>
-          <div>
-            <h3>First-Gen Perspective</h3>
-            <p>I grew up without a financial playbook. That lived experience is why this audience sees themselves in my content &mdash; and why your brand will feel authentic through me.</p>
-          </div>
-        </div>
+      <div class="proof-collage fade-up">
+        <img class="proof-img large" src="comments/Comment %235.jpg" alt="Viewer comment" loading="lazy">
+        <img class="proof-img large" src="comments/Comment %234.jpg" alt="Viewer comment" loading="lazy">
+        <img class="proof-img small" src="comments/Anna.jpg" alt="Viewer comment" loading="lazy">
+        <img class="proof-img small" src="comments/Comment %237.jpg" alt="Viewer comment" loading="lazy">
+        <img class="proof-img small" src="comments/Comment %2310.jpg" alt="Viewer comment" loading="lazy">
+        <img class="proof-img small" src="comments/Comment %2320.jpg" alt="Viewer comment" loading="lazy">
       </div>
-    </div>
-    <div class="floating-comment" style="bottom: 1.5rem; left: 2rem; transform: rotate(-1deg); max-width: 500px;">
-      <img src="comments/Comment %2320.jpg" alt="Viewer comment" style="transform: rotate(-1deg);">
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-section" id="contact">
     <div class="section-inner">
-      <p class="tagline-big">Real expertise. Real audience. Real results.</p>
-      <h2>Your audience is waiting. Let's connect them to your brand.</h2>
-      <p>I'm currently partnering with fintech companies, financial education platforms, and brands that serve women building wealth. Let's talk about what that looks like for you.</p>
-      <a href="mailto:wealthwahidah@gmail.com?subject=Partnership%20Inquiry%20%E2%80%94%20Wealth%20Wahidah&amp;body=Hi%20Wahidah%2C%0A%0AI%E2%80%99m%20reaching%20out%20from%20%5BCompany%20Name%5D.%20We%E2%80%99re%20interested%20in%20exploring%20a%20partnership%20with%20Wealth%20Wahidah.%0A%0AHere%E2%80%99s%20a%20bit%20about%20what%20we%20have%20in%20mind%3A%0A%0A-%20Type%20of%20partnership%3A%20%5Bsponsorship%20%2F%20brand%20deal%20%2F%20consulting%20%2F%20other%5D%0A-%20Budget%20range%3A%20%5B%24%5D%0A-%20Timeline%3A%20%5B%5D%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="cta-button">
-        Apply to Partner With Me &rarr;
+      <p class="tagline-big">Credentials. Content. Camera-ready.</p>
+      <h2>Let's build something that earns trust.</h2>
+      <p>I'm looking for my next role in financial education content, whether that's as a content lead, social creator, or education strategist at a company that believes financial literacy changes lives.</p>
+      <a href="mailto:wealthwahidah@gmail.com?subject=Let's%20Work%20Together%20-%20Wahidah%20Aziz&body=Hi%20Wahidah%2C%0A%0AI%20came%20across%20your%20site%20and%20would%20love%20to%20connect%20about%20a%20potential%20opportunity.%0A%0A-%20Company%3A%20%5B%5D%0A-%20Role%3A%20%5B%5D%0A-%20What%20caught%20my%20eye%3A%20%5B%5D%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="cta-button">
+        Let's Work Together &rarr;
       </a>
-      <p class="cta-email">or email me directly at <a href="mailto:wealthwahidah@gmail.com">wealthwahidah@gmail.com</a></p>
+      <p class="cta-email">or reach me at <a href="mailto:wealthwahidah@gmail.com">wealthwahidah@gmail.com</a></p>
+      <a href="WahidahAziz_ContentLead_Resume.pdf" download class="cta-button" style="background: transparent; border: 2px solid var(--gold); color: var(--gold); box-shadow: none; margin-top: 1rem;">Download My Resume &darr;</a>
       <div class="social-links">
         <a href="https://youtube.com/@WealthWahidah" target="_blank" rel="noopener" class="social-link">YouTube</a>
-        <a href="https://www.linkedin.com/in/wahidah-aziz-4459ba60" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/wealthwahidah" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Wealth Wahidah. All rights reserved.</p>
+    <p>&copy; 2026 Wahidah Aziz. All rights reserved.</p>
   </footer>
 
   <script>
@@ -1270,49 +1177,6 @@
         document.querySelector('nav ul').classList.remove('open');
       });
     });
-
-    // Animated stat counters
-    const countObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.dataset.counted) {
-          entry.target.dataset.counted = 'true';
-          const target = entry.target.textContent.trim();
-          const hasPlus = target.includes('+');
-          const hasPercent = target.includes('%');
-          const hasColon = target.includes(':');
-          const numStr = target.replace(/[^0-9.]/g, '');
-          const end = parseFloat(numStr);
-          const isDecimal = numStr.includes('.');
-          const duration = 1500;
-          const start = performance.now();
-
-          if (hasColon) return; // skip ratio format
-
-          const animate = (now) => {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const current = eased * end;
-            let display;
-            if (target.includes('K')) {
-              display = Math.round(current) + 'K';
-            } else if (isDecimal) {
-              display = current.toFixed(1);
-            } else {
-              display = Math.round(current);
-            }
-            if (hasPercent) display += '%';
-            if (hasPlus) display += '+';
-            entry.target.textContent = display;
-            if (progress < 1) requestAnimationFrame(animate);
-          };
-          requestAnimationFrame(animate);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.stat-number').forEach(el => countObserver.observe(el));
   </script>
-
 </body>
 </html>
